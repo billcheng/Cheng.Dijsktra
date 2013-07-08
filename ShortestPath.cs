@@ -405,14 +405,16 @@ namespace Cheng.Algorithm
             }
         }
 
-        /**
-         * shortest path result
-         */
+        /// <summary>
+        /// shortest path result
+        /// </summary>
         private LinkedList<Graph.Vertex> sp;
-        /**
-         * shortest path distant in the path
-         */
+
+        /// <summary>
+        /// shortest path distant in the path
+        /// </summary>
         private int min;
+
 
         public Dijsktra()
         {
@@ -420,18 +422,14 @@ namespace Cheng.Algorithm
             min = int.MaxValue;
         }
 
-        /**
-         * analyze the graph for shortest path
-         * 
-         * @param graph
-         *            graph to be analyzed
-         * @param startID
-         *            starting vertex
-         * @param terminateID
-         *            terminating vertex
-         * @return the shortest path between starting and terminating vertices; -1
-         *         if start and terminate are not connected
-         */
+
+        /// <summary>
+        /// analyse the graph for shortest path
+        /// </summary>
+        /// <param name="graph">graph to be analyzed</param>
+        /// <param name="startName">starting vertex</param>
+        /// <param name="destinationName">terminating vertex</param>
+        /// <returns>the shortest path between starting and terminating vertices; -1 if start and terminate are not connected</returns>
         public int analyze(Graph graph, String startName, String destinationName)
         {
             FibonacciHeap fibheap = new FibonacciHeap();
@@ -496,25 +494,32 @@ namespace Cheng.Algorithm
             return min;
         }
 
-        /**
-         * get the shortest distant between starting and terminating vertices
-         * 
-         * @return shortest distant
-         */
-        public int getMin()
+
+
+
+        /// <summary>
+        /// get the shortest distant between starting and terminating vertices
+        /// </summary>
+        public int Min
         {
-            return min;
+            get
+            {
+                return min;
+            }
         }
 
-        /**
-         * get the shortest path result
-         * 
-         * @return shortest path vertices
-         */
-        public LinkedList<Graph.Vertex> getPath()
+
+        /// <summary>
+        /// get the shortest path result
+        /// </summary>
+        public LinkedList<Graph.Vertex> Path
         {
-            return sp;
+            get
+            {
+                return sp;
+            }
         }
+
 
     }
 }
